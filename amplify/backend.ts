@@ -7,7 +7,7 @@ const backend = defineBackend({
   data,
 });
 
-// Add Bedrock data source
+// Add Bedrock HTTP data source for AI queries
 backend.data.addHttpDataSource(
   'BedrockDataSource',
   'https://bedrock-runtime.us-east-1.amazonaws.com',

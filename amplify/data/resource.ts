@@ -13,7 +13,7 @@ const schema = a.schema({
     })
     .authorization((allow) => [allow.guest()]),
   
-  // Custom query for Bedrock
+  // Custom query for Bedrock AI
   generateHaiku: a
     .query()
     .arguments({
@@ -37,18 +37,6 @@ export const data = defineData({
     defaultAuthorizationMode: 'userPool',
   },
 });
-
-// Add Bedrock data source
-data.addHttpDataSource(
-  'BedrockDataSource',
-  'https://bedrock-runtime.us-east-1.amazonaws.com',
-  {
-    authorizationConfig: {
-      signingRegion: 'us-east-1',
-      signingServiceName: 'bedrock',
-    },
-  }
-);
 
 /*== STEP 2 ===============================================================
 Go to your frontend source code. From your client-side code, generate a
