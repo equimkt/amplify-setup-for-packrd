@@ -1,0 +1,651 @@
+  
+  Amplify Sandbox
+  
+  Identifier: 	markkaplan
+  Stack: 	amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440
+  Region: 	us-east-1
+  
+  To specify a different sandbox identifier, use --identifier
+
+7:15:38 PM [Sandbox] Executing command `deploy`
+7:15:39 PM [amplify: SYNTH_STARTED] 7:15:39 PM Backend synthesis started 
+7:15:39 PM [synth: CDK_TOOLKIT_I1001] Starting Synthesis ...
+7:15:39 PM [assembly: undefined] context: {
+  'amplify-backend-namespace': 'amplify-setup-for-packrd',
+  'amplify-backend-name': 'markkaplan',
+  'amplify-backend-type': 'sandbox',
+  'aws:cdk:enable-path-metadata': true,
+  'aws:cdk:enable-asset-metadata': true,
+  'aws:cdk:version-reporting': true,
+  'aws:cdk:bundling-stacks': [ '**' ]
+}
+7:15:39 PM [assembly: CDK_ASSEMBLY_I0010] Setting "CDK_DEFAULT_REGION" environment variable to us-east-1
+7:15:39 PM [assembly: undefined] Retrieved account ID 471112782782 from disk cache
+7:15:39 PM [assembly: CDK_ASSEMBLY_I0010] Setting "CDK_DEFAULT_ACCOUNT" environment variable to 471112782782
+7:15:39 PM [assembly: CDK_ASSEMBLY_I0010] outdir: /Users/markkaplan/amplify-setup-for-packrd/.amplify/artifacts/cdk.out
+7:15:39 PM [assembly: CDK_ASSEMBLY_I0010] env: {
+  CDK_DEFAULT_REGION: 'us-east-1',
+  CDK_DEFAULT_ACCOUNT: '471112782782',
+  CDK_OUTDIR: '/Users/markkaplan/amplify-setup-for-packrd/.amplify/artifacts/cdk.out',
+  CDK_CLI_ASM_VERSION: '48.0.0',
+  CDK_CLI_VERSION: '1.6.1'
+}
+7:15:41 PM WARNING: Schema is using an @auth directive with deprecated provider 'iam'. Replace 'iam' provider with 'identityPool' provider.
+7:15:41 PM 
+7:15:42 PM [synth: CDK_TOOLKIT_I1000] 7:15:42 PM Synthesis time: 2.77s {
+  "duration": 2765
+}
+7:15:42 PM [synth: CDK_TOOLKIT_I1901] 7:15:42 PM Successfully synthesized to /Users/markkaplan/amplify-setup-for-packrd/.amplify/artifacts/cdk.out {
+  "assemblyDirectory": "/Users/markkaplan/amplify-setup-for-packrd/.amplify/artifacts/cdk.out",
+  "stacksCount": 1,
+  "stackIds": [
+    "amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440"
+  ],
+  "stack": {
+    "stackName": "amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440",
+    "hierarchicalId": "amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440",
+    "template": {
+      "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"AmplifySandbox\",\"createdWith\":\"1.18.0\",\"stackType\":\"root\",\"metadata\":{}}",
+      "Metadata": {
+        "AWS::Amplify::Platform": {
+          "version": "1",
+          "stackOutputs": [
+            "deploymentType",
+            "region"
+          ]
+        },
+        "AWS::Amplify::Auth": {
+          "version": "1",
+          "stackOutputs": [
+            "userPoolId",
+            "webClientId",
+            "identityPoolId",
+            "authRegion",
+            "allowUnauthenticatedIdentities",
+            "signupAttributes",
+            "usernameAttributes",
+            "verificationMechanisms",
+            "passwordPolicyMinLength",
+            "passwordPolicyRequirements",
+            "mfaConfiguration",
+            "mfaTypes",
+            "socialProviders",
+            "oauthCognitoDomain",
+            "oauthScope",
+            "oauthRedirectSignIn",
+            "oauthRedirectSignOut",
+            "oauthResponseType",
+            "oauthClientId",
+            "groups"
+          ]
+        },
+        "AWS::Amplify::GraphQL": {
+          "version": "1",
+          "stackOutputs": [
+            "awsAppsyncApiId",
+            "awsAppsyncApiEndpoint",
+            "awsAppsyncAuthenticationType",
+            "awsAppsyncRegion",
+            "amplifyApiModelSchemaS3Uri",
+            "awsAppsyncAdditionalAuthenticationTypes"
+          ]
+        }
+      },
+      "Outputs": {
+        "deploymentType": {
+          "Value": "sandbox"
+        },
+        "region": {
+          "Value": {
+            "Ref": "AWS::Region"
+          }
+        },
+        "userPoolId": {
+          "Value": {
+            "Fn::GetAtt": [
+              "auth179371D7",
+              "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolD87146DARef"
+            ]
+          }
+        },
+        "webClientId": {
+          "Value": {
+            "Fn::GetAtt": [
+              "auth179371D7",
+              "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolAppClientEC3A1C16Ref"
+            ]
+          }
+        },
+        "identityPoolId": {
+          "Value": {
+            "Fn::GetAtt": [
+              "auth179371D7",
+              "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthIdentityPool39A7C161Ref"
+            ]
+          }
+        },
+        "authRegion": {
+          "Value": {
+            "Ref": "AWS::Region"
+          }
+        },
+        "allowUnauthenticatedIdentities": {
+          "Value": "true"
+        },
+        "signupAttributes": {
+          "Value": "[\"email\"]"
+        },
+        "usernameAttributes": {
+          "Value": "[\"email\"]"
+        },
+        "verificationMechanisms": {
+          "Value": "[\"email\"]"
+        },
+        "passwordPolicyMinLength": {
+          "Value": "8"
+        },
+        "passwordPolicyRequirements": {
+          "Value": "[\"REQUIRES_NUMBERS\",\"REQUIRES_LOWERCASE\",\"REQUIRES_UPPERCASE\",\"REQUIRES_SYMBOLS\"]"
+        },
+        "mfaConfiguration": {
+          "Value": "OFF"
+        },
+        "mfaTypes": {
+          "Value": "[]"
+        },
+        "socialProviders": {
+          "Value": ""
+        },
+        "oauthCognitoDomain": {
+          "Value": ""
+        },
+        "oauthScope": {
+          "Value": "[\"profile\",\"phone\",\"email\",\"openid\",\"aws.cognito.signin.user.admin\"]"
+        },
+        "oauthRedirectSignIn": {
+          "Value": "https://example.com"
+        },
+        "oauthRedirectSignOut": {
+          "Value": ""
+        },
+        "oauthResponseType": {
+          "Value": "code"
+        },
+        "oauthClientId": {
+          "Value": {
+            "Fn::GetAtt": [
+              "auth179371D7",
+              "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolAppClientEC3A1C16Ref"
+            ]
+          }
+        },
+        "groups": {
+          "Value": "[]"
+        },
+        "awsAppsyncApiId": {
+          "Value": {
+            "Fn::GetAtt": [
+              "data7552DF31",
+              "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440dataamplifyDataGraphQLAPIC6F41C82ApiId"
+            ]
+          }
+        },
+        "awsAppsyncApiEndpoint": {
+          "Value": {
+            "Fn::GetAtt": [
+              "data7552DF31",
+              "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440dataamplifyDataGraphQLAPIC6F41C82GraphQLUrl"
+            ]
+          }
+        },
+        "awsAppsyncAuthenticationType": {
+          "Value": "AMAZON_COGNITO_USER_POOLS"
+        },
+        "awsAppsyncRegion": {
+          "Value": {
+            "Ref": "AWS::Region"
+          }
+        },
+        "amplifyApiModelSchemaS3Uri": {
+          "Value": {
+            "Fn::Join": [
+              "",
+              [
+                "s3://",
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "/",
+                        {
+                          "Fn::Select": [
+                            5,
+                            {
+                              "Fn::Split": [
+                                ":",
+                                {
+                                  "Fn::GetAtt": [
+                                    "data7552DF31",
+                                    "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiBCCDFEEDDDestinationBucketArn"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "/model-schema.graphql"
+              ]
+            ]
+          }
+        },
+        "awsAppsyncAdditionalAuthenticationTypes": {
+          "Value": "AWS_IAM"
+        }
+      },
+      "Resources": {
+        "auth179371D7": {
+          "Type": "AWS::CloudFormation::Stack",
+          "Properties": {
+            "Tags": [
+              {
+                "Key": "amplify:deployment-type",
+                "Value": "sandbox"
+              },
+              {
+                "Key": "created-by",
+                "Value": "amplify"
+              }
+            ],
+            "TemplateURL": {
+              "Fn::Join": [
+                "",
+                [
+                  "https://s3.",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ".",
+                  {
+                    "Ref": "AWS::URLSuffix"
+                  },
+                  "/",
+                  {
+                    "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+                  },
+                  "/5c4d32a63f4d0dc9788f718528072d3d0e57c706ce9a73612470cc3feea6f145.json"
+                ]
+              ]
+            }
+          },
+          "UpdateReplacePolicy": "Delete",
+          "DeletionPolicy": "Delete",
+          "Metadata": {
+            "aws:cdk:path": "amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440/auth.NestedStack/auth.NestedStackResource",
+            "aws:asset:path": "amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authA4046F46.nested.template.json",
+            "aws:asset:property": "TemplateURL"
+          }
+        },
+        "data7552DF31": {
+          "Type": "AWS::CloudFormation::Stack",
+          "Properties": {
+            "Parameters": {
+              "referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolD87146DARef": {
+                "Fn::GetAtt": [
+                  "auth179371D7",
+                  "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolD87146DARef"
+                ]
+              },
+              "referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthauthenticatedUserRole9BD2388BRef": {
+                "Fn::GetAtt": [
+                  "auth179371D7",
+                  "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthauthenticatedUserRole9BD2388BRef"
+                ]
+              },
+              "referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthunauthenticatedUserRoleC4E9A359Ref": {
+                "Fn::GetAtt": [
+                  "auth179371D7",
+                  "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthunauthenticatedUserRoleC4E9A359Ref"
+                ]
+              },
+              "referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthIdentityPool39A7C161Ref": {
+                "Fn::GetAtt": [
+                  "auth179371D7",
+                  "Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthIdentityPool39A7C161Ref"
+                ]
+              }
+            },
+            "Tags": [
+              {
+                "Key": "amplify:deployment-type",
+                "Value": "sandbox"
+              },
+              {
+                "Key": "created-by",
+                "Value": "amplify"
+              }
+            ],
+            "TemplateURL": {
+              "Fn::Join": [
+                "",
+                [
+                  "https://s3.",
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ".",
+                  {
+                    "Ref": "AWS::URLSuffix"
+                  },
+                  "/",
+                  {
+                    "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+                  },
+                  "/d12f3ec3b9c6a2b5abca944aca911eaa24921e82af0d6161ea26bd8d4bea981a.json"
+                ]
+              ]
+            }
+          },
+          "UpdateReplacePolicy": "Delete",
+          "DeletionPolicy": "Delete",
+          "Metadata": {
+            "aws:cdk:path": "amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440/data.NestedStack/data.NestedStackResource",
+            "aws:asset:path": "amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440data82C5EB37.nested.template.json",
+            "aws:asset:property": "TemplateURL"
+          }
+        },
+        "CDKMetadata": {
+          "Type": "AWS::CDK::Metadata",
+          "Properties": {
+            "Analytics": "v2:deflate64:H4sIAAAAAAAA/zPSMzI00zNQTCwv1k1OydbNyUzSqw4uSUzO1nFOy/MvLSkoLQGxwEK1Onn5Kal6WcX6ZUYmeoaGegaKWcWZmbpFpXklmbmpekEQGgBFS65nVAAAAA=="
+          },
+          "Metadata": {
+            "aws:cdk:path": "amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440/CDKMetadata/Default"
+          },
+          "Condition": "CDKMetadataAvailable"
+        }
+      },
+      "Conditions": {
+        "CDKMetadataAvailable": {
+          "Fn::Or": [
+            {
+              "Fn::Or": [
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "af-south-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ap-east-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ap-northeast-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ap-northeast-2"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ap-northeast-3"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ap-south-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ap-south-2"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ap-southeast-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ap-southeast-2"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ap-southeast-3"
+                  ]
+                }
+              ]
+            },
+            {
+              "Fn::Or": [
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ap-southeast-4"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ca-central-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "ca-west-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "cn-north-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "cn-northwest-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "eu-central-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "eu-central-2"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "eu-north-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "eu-south-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "eu-south-2"
+                  ]
+                }
+              ]
+            },
+            {
+              "Fn::Or": [
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "eu-west-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "eu-west-2"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "eu-west-3"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "il-central-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "me-central-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "me-south-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "sa-east-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "us-east-1"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "us-east-2"
+                  ]
+                },
+                {
+                  "Fn::Equals": [
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    "us-west-1"
+                  ]
+                }
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      },
+      "Parameters": {
+        "BootstrapVersion": {
+          "Type": "AWS::SSM::Parameter::Value<String>",
+          "Default": "/cdk-bootstrap/hnb659fds/version",
+          "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+        }
+      }
+    },
+    "stringifiedJson": "{\n  \"Description\": \"{\\\"createdOn\\\":\\\"Mac\\\",\\\"createdBy\\\":\\\"AmplifySandbox\\\",\\\"createdWith\\\":\\\"1.18.0\\\",\\\"stackType\\\":\\\"root\\\",\\\"metadata\\\":{}}\",\n  \"Metadata\": {\n    \"AWS::Amplify::Platform\": {\n      \"version\": \"1\",\n      \"stackOutputs\": [\n        \"deploymentType\",\n        \"region\"\n      ]\n    },\n    \"AWS::Amplify::Auth\": {\n      \"version\": \"1\",\n      \"stackOutputs\": [\n        \"userPoolId\",\n        \"webClientId\",\n        \"identityPoolId\",\n        \"authRegion\",\n        \"allowUnauthenticatedIdentities\",\n        \"signupAttributes\",\n        \"usernameAttributes\",\n        \"verificationMechanisms\",\n        \"passwordPolicyMinLength\",\n        \"passwordPolicyRequirements\",\n        \"mfaConfiguration\",\n        \"mfaTypes\",\n        \"socialProviders\",\n        \"oauthCognitoDomain\",\n        \"oauthScope\",\n        \"oauthRedirectSignIn\",\n        \"oauthRedirectSignOut\",\n        \"oauthResponseType\",\n        \"oauthClientId\",\n        \"groups\"\n      ]\n    },\n    \"AWS::Amplify::GraphQL\": {\n      \"version\": \"1\",\n      \"stackOutputs\": [\n        \"awsAppsyncApiId\",\n        \"awsAppsyncApiEndpoint\",\n        \"awsAppsyncAuthenticationType\",\n        \"awsAppsyncRegion\",\n        \"amplifyApiModelSchemaS3Uri\",\n        \"awsAppsyncAdditionalAuthenticationTypes\"\n      ]\n    }\n  },\n  \"Outputs\": {\n    \"deploymentType\": {\n      \"Value\": \"sandbox\"\n    },\n    \"region\": {\n      \"Value\": {\n        \"Ref\": \"AWS::Region\"\n      }\n    },\n    \"userPoolId\": {\n      \"Value\": {\n        \"Fn::GetAtt\": [\n          \"auth179371D7\",\n          \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolD87146DARef\"\n        ]\n      }\n    },\n    \"webClientId\": {\n      \"Value\": {\n        \"Fn::GetAtt\": [\n          \"auth179371D7\",\n          \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolAppClientEC3A1C16Ref\"\n        ]\n      }\n    },\n    \"identityPoolId\": {\n      \"Value\": {\n        \"Fn::GetAtt\": [\n          \"auth179371D7\",\n          \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthIdentityPool39A7C161Ref\"\n        ]\n      }\n    },\n    \"authRegion\": {\n      \"Value\": {\n        \"Ref\": \"AWS::Region\"\n      }\n    },\n    \"allowUnauthenticatedIdentities\": {\n      \"Value\": \"true\"\n    },\n    \"signupAttributes\": {\n      \"Value\": \"[\\\"email\\\"]\"\n    },\n    \"usernameAttributes\": {\n      \"Value\": \"[\\\"email\\\"]\"\n    },\n    \"verificationMechanisms\": {\n      \"Value\": \"[\\\"email\\\"]\"\n    },\n    \"passwordPolicyMinLength\": {\n      \"Value\": \"8\"\n    },\n    \"passwordPolicyRequirements\": {\n      \"Value\": \"[\\\"REQUIRES_NUMBERS\\\",\\\"REQUIRES_LOWERCASE\\\",\\\"REQUIRES_UPPERCASE\\\",\\\"REQUIRES_SYMBOLS\\\"]\"\n    },\n    \"mfaConfiguration\": {\n      \"Value\": \"OFF\"\n    },\n    \"mfaTypes\": {\n      \"Value\": \"[]\"\n    },\n    \"socialProviders\": {\n      \"Value\": \"\"\n    },\n    \"oauthCognitoDomain\": {\n      \"Value\": \"\"\n    },\n    \"oauthScope\": {\n      \"Value\": \"[\\\"profile\\\",\\\"phone\\\",\\\"email\\\",\\\"openid\\\",\\\"aws.cognito.signin.user.admin\\\"]\"\n    },\n    \"oauthRedirectSignIn\": {\n      \"Value\": \"https://example.com\"\n    },\n    \"oauthRedirectSignOut\": {\n      \"Value\": \"\"\n    },\n    \"oauthResponseType\": {\n      \"Value\": \"code\"\n    },\n    \"oauthClientId\": {\n      \"Value\": {\n        \"Fn::GetAtt\": [\n          \"auth179371D7\",\n          \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolAppClientEC3A1C16Ref\"\n        ]\n      }\n    },\n    \"groups\": {\n      \"Value\": \"[]\"\n    },\n    \"awsAppsyncApiId\": {\n      \"Value\": {\n        \"Fn::GetAtt\": [\n          \"data7552DF31\",\n          \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440dataamplifyDataGraphQLAPIC6F41C82ApiId\"\n        ]\n      }\n    },\n    \"awsAppsyncApiEndpoint\": {\n      \"Value\": {\n        \"Fn::GetAtt\": [\n          \"data7552DF31\",\n          \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440dataamplifyDataGraphQLAPIC6F41C82GraphQLUrl\"\n        ]\n      }\n    },\n    \"awsAppsyncAuthenticationType\": {\n      \"Value\": \"AMAZON_COGNITO_USER_POOLS\"\n    },\n    \"awsAppsyncRegion\": {\n      \"Value\": {\n        \"Ref\": \"AWS::Region\"\n      }\n    },\n    \"amplifyApiModelSchemaS3Uri\": {\n      \"Value\": {\n        \"Fn::Join\": [\n          \"\",\n          [\n            \"s3://\",\n            {\n              \"Fn::Select\": [\n                0,\n                {\n                  \"Fn::Split\": [\n                    \"/\",\n                    {\n                      \"Fn::Select\": [\n                        5,\n                        {\n                          \"Fn::Split\": [\n                            \":\",\n                            {\n                              \"Fn::GetAtt\": [\n                                \"data7552DF31\",\n                                \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiBCCDFEEDDDestinationBucketArn\"\n                              ]\n                            }\n                          ]\n                        }\n                      ]\n                    }\n                  ]\n                }\n              ]\n            },\n            \"/model-schema.graphql\"\n          ]\n        ]\n      }\n    },\n    \"awsAppsyncAdditionalAuthenticationTypes\": {\n      \"Value\": \"AWS_IAM\"\n    }\n  },\n  \"Resources\": {\n    \"auth179371D7\": {\n      \"Type\": \"AWS::CloudFormation::Stack\",\n      \"Properties\": {\n        \"Tags\": [\n          {\n            \"Key\": \"amplify:deployment-type\",\n            \"Value\": \"sandbox\"\n          },\n          {\n            \"Key\": \"created-by\",\n            \"Value\": \"amplify\"\n          }\n        ],\n        \"TemplateURL\": {\n          \"Fn::Join\": [\n            \"\",\n            [\n              \"https://s3.\",\n              {\n                \"Ref\": \"AWS::Region\"\n              },\n              \".\",\n              {\n                \"Ref\": \"AWS::URLSuffix\"\n              },\n              \"/\",\n              {\n                \"Fn::Sub\": \"cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}\"\n              },\n              \"/5c4d32a63f4d0dc9788f718528072d3d0e57c706ce9a73612470cc3feea6f145.json\"\n            ]\n          ]\n        }\n      },\n      \"UpdateReplacePolicy\": \"Delete\",\n      \"DeletionPolicy\": \"Delete\",\n      \"Metadata\": {\n        \"aws:cdk:path\": \"amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440/auth.NestedStack/auth.NestedStackResource\",\n        \"aws:asset:path\": \"amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authA4046F46.nested.template.json\",\n        \"aws:asset:property\": \"TemplateURL\"\n      }\n    },\n    \"data7552DF31\": {\n      \"Type\": \"AWS::CloudFormation::Stack\",\n      \"Properties\": {\n        \"Parameters\": {\n          \"referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolD87146DARef\": {\n            \"Fn::GetAtt\": [\n              \"auth179371D7\",\n              \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolD87146DARef\"\n            ]\n          },\n          \"referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthauthenticatedUserRole9BD2388BRef\": {\n            \"Fn::GetAtt\": [\n              \"auth179371D7\",\n              \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthauthenticatedUserRole9BD2388BRef\"\n            ]\n          },\n          \"referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthunauthenticatedUserRoleC4E9A359Ref\": {\n            \"Fn::GetAtt\": [\n              \"auth179371D7\",\n              \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthunauthenticatedUserRoleC4E9A359Ref\"\n            ]\n          },\n          \"referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthIdentityPool39A7C161Ref\": {\n            \"Fn::GetAtt\": [\n              \"auth179371D7\",\n              \"Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthIdentityPool39A7C161Ref\"\n            ]\n          }\n        },\n        \"Tags\": [\n          {\n            \"Key\": \"amplify:deployment-type\",\n            \"Value\": \"sandbox\"\n          },\n          {\n            \"Key\": \"created-by\",\n            \"Value\": \"amplify\"\n          }\n        ],\n        \"TemplateURL\": {\n          \"Fn::Join\": [\n            \"\",\n            [\n              \"https://s3.\",\n              {\n                \"Ref\": \"AWS::Region\"\n              },\n              \".\",\n              {\n                \"Ref\": \"AWS::URLSuffix\"\n              },\n              \"/\",\n              {\n                \"Fn::Sub\": \"cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}\"\n              },\n              \"/d12f3ec3b9c6a2b5abca944aca911eaa24921e82af0d6161ea26bd8d4bea981a.json\"\n            ]\n          ]\n        }\n      },\n      \"UpdateReplacePolicy\": \"Delete\",\n      \"DeletionPolicy\": \"Delete\",\n      \"Metadata\": {\n        \"aws:cdk:path\": \"amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440/data.NestedStack/data.NestedStackResource\",\n        \"aws:asset:path\": \"amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440data82C5EB37.nested.template.json\",\n        \"aws:asset:property\": \"TemplateURL\"\n      }\n    },\n    \"CDKMetadata\": {\n      \"Type\": \"AWS::CDK::Metadata\",\n      \"Properties\": {\n        \"Analytics\": \"v2:deflate64:H4sIAAAAAAAA/zPSMzI00zNQTCwv1k1OydbNyUzSqw4uSUzO1nFOy/MvLSkoLQGxwEK1Onn5Kal6WcX6ZUYmeoaGegaKWcWZmbpFpXklmbmpekEQGgBFS65nVAAAAA==\"\n      },\n      \"Metadata\": {\n        \"aws:cdk:path\": \"amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440/CDKMetadata/Default\"\n      },\n      \"Condition\": \"CDKMetadataAvailable\"\n    }\n  },\n  \"Conditions\": {\n    \"CDKMetadataAvailable\": {\n      \"Fn::Or\": [\n        {\n          \"Fn::Or\": [\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"af-south-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ap-east-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ap-northeast-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ap-northeast-2\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ap-northeast-3\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ap-south-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ap-south-2\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ap-southeast-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ap-southeast-2\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ap-southeast-3\"\n              ]\n            }\n          ]\n        },\n        {\n          \"Fn::Or\": [\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ap-southeast-4\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ca-central-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"ca-west-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"cn-north-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"cn-northwest-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"eu-central-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"eu-central-2\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"eu-north-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"eu-south-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"eu-south-2\"\n              ]\n            }\n          ]\n        },\n        {\n          \"Fn::Or\": [\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"eu-west-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"eu-west-2\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"eu-west-3\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"il-central-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"me-central-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"me-south-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"sa-east-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"us-east-1\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"us-east-2\"\n              ]\n            },\n            {\n              \"Fn::Equals\": [\n                {\n                  \"Ref\": \"AWS::Region\"\n                },\n                \"us-west-1\"\n              ]\n            }\n          ]\n        },\n        {\n          \"Fn::Equals\": [\n            {\n              \"Ref\": \"AWS::Region\"\n            },\n            \"us-west-2\"\n          ]\n        }\n      ]\n    }\n  },\n  \"Parameters\": {\n    \"BootstrapVersion\": {\n      \"Type\": \"AWS::SSM::Parameter::Value<String>\",\n      \"Default\": \"/cdk-bootstrap/hnb659fds/version\",\n      \"Description\": \"Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]\"\n    }\n  }\n}",
+    "stringifiedYaml": "Description: '{\"createdOn\":\"Mac\",\"createdBy\":\"AmplifySandbox\",\"createdWith\":\"1.18.0\",\"stackType\":\"root\",\"metadata\":{}}'\nMetadata:\n  AWS::Amplify::Platform:\n    version: \"1\"\n    stackOutputs:\n      - deploymentType\n      - region\n  AWS::Amplify::Auth:\n    version: \"1\"\n    stackOutputs:\n      - userPoolId\n      - webClientId\n      - identityPoolId\n      - authRegion\n      - allowUnauthenticatedIdentities\n      - signupAttributes\n      - usernameAttributes\n      - verificationMechanisms\n      - passwordPolicyMinLength\n      - passwordPolicyRequirements\n      - mfaConfiguration\n      - mfaTypes\n      - socialProviders\n      - oauthCognitoDomain\n      - oauthScope\n      - oauthRedirectSignIn\n      - oauthRedirectSignOut\n      - oauthResponseType\n      - oauthClientId\n      - groups\n  AWS::Amplify::GraphQL:\n    version: \"1\"\n    stackOutputs:\n      - awsAppsyncApiId\n      - awsAppsyncApiEndpoint\n      - awsAppsyncAuthenticationType\n      - awsAppsyncRegion\n      - amplifyApiModelSchemaS3Uri\n      - awsAppsyncAdditionalAuthenticationTypes\nOutputs:\n  deploymentType:\n    Value: sandbox\n  region:\n    Value:\n      Ref: AWS::Region\n  userPoolId:\n    Value:\n      Fn::GetAtt:\n        - auth179371D7\n        - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolD87146DARef\n  webClientId:\n    Value:\n      Fn::GetAtt:\n        - auth179371D7\n        - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolAppClientEC3A1C16Ref\n  identityPoolId:\n    Value:\n      Fn::GetAtt:\n        - auth179371D7\n        - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthIdentityPool39A7C161Ref\n  authRegion:\n    Value:\n      Ref: AWS::Region\n  allowUnauthenticatedIdentities:\n    Value: \"true\"\n  signupAttributes:\n    Value: '[\"email\"]'\n  usernameAttributes:\n    Value: '[\"email\"]'\n  verificationMechanisms:\n    Value: '[\"email\"]'\n  passwordPolicyMinLength:\n    Value: \"8\"\n  passwordPolicyRequirements:\n    Value: '[\"REQUIRES_NUMBERS\",\"REQUIRES_LOWERCASE\",\"REQUIRES_UPPERCASE\",\"REQUIRES_SYMBOLS\"]'\n  mfaConfiguration:\n    Value: \"OFF\"\n  mfaTypes:\n    Value: \"[]\"\n  socialProviders:\n    Value: \"\"\n  oauthCognitoDomain:\n    Value: \"\"\n  oauthScope:\n    Value: '[\"profile\",\"phone\",\"email\",\"openid\",\"aws.cognito.signin.user.admin\"]'\n  oauthRedirectSignIn:\n    Value: https://example.com\n  oauthRedirectSignOut:\n    Value: \"\"\n  oauthResponseType:\n    Value: code\n  oauthClientId:\n    Value:\n      Fn::GetAtt:\n        - auth179371D7\n        - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolAppClientEC3A1C16Ref\n  groups:\n    Value: \"[]\"\n  awsAppsyncApiId:\n    Value:\n      Fn::GetAtt:\n        - data7552DF31\n        - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440dataamplifyDataGraphQLAPIC6F41C82ApiId\n  awsAppsyncApiEndpoint:\n    Value:\n      Fn::GetAtt:\n        - data7552DF31\n        - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440dataamplifyDataGraphQLAPIC6F41C82GraphQLUrl\n  awsAppsyncAuthenticationType:\n    Value: AMAZON_COGNITO_USER_POOLS\n  awsAppsyncRegion:\n    Value:\n      Ref: AWS::Region\n  amplifyApiModelSchemaS3Uri:\n    Value:\n      Fn::Join:\n        - \"\"\n        - - s3://\n          - Fn::Select:\n              - 0\n              - Fn::Split:\n                  - /\n                  - Fn::Select:\n                      - 5\n                      - Fn::Split:\n                          - \":\"\n                          - Fn::GetAtt:\n                              - data7552DF31\n                              - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiBCCDFEEDDDestinationBucketArn\n          - /model-schema.graphql\n  awsAppsyncAdditionalAuthenticationTypes:\n    Value: AWS_IAM\nResources:\n  auth179371D7:\n    Type: AWS::CloudFormation::Stack\n    Properties:\n      Tags:\n        - Key: amplify:deployment-type\n          Value: sandbox\n        - Key: created-by\n          Value: amplify\n      TemplateURL:\n        Fn::Join:\n          - \"\"\n          - - https://s3.\n            - Ref: AWS::Region\n            - \".\"\n            - Ref: AWS::URLSuffix\n            - /\n            - Fn::Sub: cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}\n            - /5c4d32a63f4d0dc9788f718528072d3d0e57c706ce9a73612470cc3feea6f145.json\n    UpdateReplacePolicy: Delete\n    DeletionPolicy: Delete\n    Metadata:\n      aws:cdk:path: amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440/auth.NestedStack/auth.NestedStackResource\n      aws:asset:path: amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authA4046F46.nested.template.json\n      aws:asset:property: TemplateURL\n  data7552DF31:\n    Type: AWS::CloudFormation::Stack\n    Properties:\n      Parameters:\n        referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolD87146DARef:\n          Fn::GetAtt:\n            - auth179371D7\n            - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthUserPoolD87146DARef\n        referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthauthenticatedUserRole9BD2388BRef:\n          Fn::GetAtt:\n            - auth179371D7\n            - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthauthenticatedUserRole9BD2388BRef\n        referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthunauthenticatedUserRoleC4E9A359Ref:\n          Fn::GetAtt:\n            - auth179371D7\n            - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthunauthenticatedUserRoleC4E9A359Ref\n        referencetoamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authNestedStackauthNestedStackResourceF813A383Outputsamplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthIdentityPool39A7C161Ref:\n          Fn::GetAtt:\n            - auth179371D7\n            - Outputs.amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440authamplifyAuthIdentityPool39A7C161Ref\n      Tags:\n        - Key: amplify:deployment-type\n          Value: sandbox\n        - Key: created-by\n          Value: amplify\n      TemplateURL:\n        Fn::Join:\n          - \"\"\n          - - https://s3.\n            - Ref: AWS::Region\n            - \".\"\n            - Ref: AWS::URLSuffix\n            - /\n            - Fn::Sub: cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}\n            - /d12f3ec3b9c6a2b5abca944aca911eaa24921e82af0d6161ea26bd8d4bea981a.json\n    UpdateReplacePolicy: Delete\n    DeletionPolicy: Delete\n    Metadata:\n      aws:cdk:path: amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440/data.NestedStack/data.NestedStackResource\n      aws:asset:path: amplifyamplifysetupforpackrdmarkkaplansandbox417f5ad440data82C5EB37.nested.template.json\n      aws:asset:property: TemplateURL\n  CDKMetadata:\n    Type: AWS::CDK::Metadata\n    Properties:\n      Analytics: v2:deflate64:H4sIAAAAAAAA/zPSMzI00zNQTCwv1k1OydbNyUzSqw4uSUzO1nFOy/MvLSkoLQGxwEK1Onn5Kal6WcX6ZUYmeoaGegaKWcWZmbpFpXklmbmpekEQGgBFS65nVAAAAA==\n    Metadata:\n      aws:cdk:path: amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440/CDKMetadata/Default\n    Condition: CDKMetadataAvailable\nConditions:\n  CDKMetadataAvailable:\n    Fn::Or:\n      - Fn::Or:\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - af-south-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ap-east-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ap-northeast-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ap-northeast-2\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ap-northeast-3\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ap-south-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ap-south-2\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ap-southeast-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ap-southeast-2\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ap-southeast-3\n      - Fn::Or:\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ap-southeast-4\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ca-central-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - ca-west-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - cn-north-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - cn-northwest-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - eu-central-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - eu-central-2\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - eu-north-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - eu-south-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - eu-south-2\n      - Fn::Or:\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - eu-west-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - eu-west-2\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - eu-west-3\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - il-central-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - me-central-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - me-south-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - sa-east-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - us-east-1\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - us-east-2\n          - Fn::Equals:\n              - Ref: AWS::Region\n              - us-west-1\n      - Fn::Equals:\n          - Ref: AWS::Region\n          - us-west-2\nParameters:\n  BootstrapVersion:\n    Type: AWS::SSM::Parameter::Value<String>\n    Default: /cdk-bootstrap/hnb659fds/version\n    Description: Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]\n"
+  }
+}
+7:15:42 PM [amplify: SYNTH_FINISHED] 7:15:42 PM Backend synthesized in 2.77 seconds 
+7:15:42 PM [amplify: TS_STARTED] 7:15:42 PM Backend type checks started 

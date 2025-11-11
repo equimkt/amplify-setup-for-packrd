@@ -1,0 +1,14 @@
+  
+  Amplify Sandbox
+  
+  Identifier: 	markkaplan
+  Stack: 	amplify-amplifysetupforpackrd-markkaplan-sandbox-417f5ad440
+  Region: 	us-east-1
+  
+  To specify a different sandbox identifier, use --identifier
+
+7:05:32 PM Synthesizing backend...
+7:05:33 PM WARNING: Schema is using an @auth directive with deprecated provider 'iam'. Replace 'iam' provider with 'identityPool' provider.
+7:05:33 PM 
+7:05:34 PM ✔ Backend synthesized in 2.51 seconds
+7:05:34 PM Running type checks...
