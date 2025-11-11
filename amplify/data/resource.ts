@@ -38,6 +38,18 @@ export const data = defineData({
   },
 });
 
+// Add Bedrock data source
+data.addHttpDataSource(
+  'BedrockDataSource',
+  'https://bedrock-runtime.us-east-1.amazonaws.com',
+  {
+    authorizationConfig: {
+      signingRegion: 'us-east-1',
+      signingServiceName: 'bedrock',
+    },
+  }
+);
+
 /*== STEP 2 ===============================================================
 Go to your frontend source code. From your client-side code, generate a
 Data client to make CRUDL requests to your table. (THIS SNIPPET WILL ONLY
